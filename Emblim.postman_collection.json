@@ -1,0 +1,420 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Emblim",
+		"_postman_id": "4abcbe54-ab93-59ee-636a-721f305ac9eb",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "EmblimUserLoginTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"User Login Successfully\"] = responseCode.code === 200;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/Token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "grant_type=password&username=Lillian&password=Woshibendan1bendan"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "FeaturedCommunitiesTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"featured communities display successful\"] = jsonData.successful === true;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/api/community/featuredcommunities",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "RecentCommunitiesTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"recent communities display successful\"] = jsonData.successful === true;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/api/community/recentcommunities",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "TrendingCommunitiesTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"trending communities display successful\"] = jsonData.successful === true;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/api/community/trendingcommunities",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "MyCommunitiesTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"list my communities\"] = jsonData.successful === true;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/api/mycommunities/list",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "NotificationsTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"list unacknowledged notifications\"] = jsonData.successful === true;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/api/notifications/unacknowledged",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "KEGcC0ujlooT8lu1thSnAwEVouJZyNnujYg0uvd5Y1irriNZm49Gfd6_hi1DfVNINT-znBGBKwjtL0VWcRlTWwsEHD3s8SYGHFBIHnMt88DsBCAirrDP_octz43_6JSFFo6b-XWl1kPiAjAPJVFeyoha9A_yHLljCoK93uECeZCE2YcH0nuta1ow7JPxmzL2wqH86O3lLwdih-4LO6hOIG8muS14zv72zhPamLv-Pf5T9FgjxVof6aUa0HZ6y2tucPtMsyz7IrUSuYMt14cx-rNmCoezUcnLeDsziDuJyB4FKocXIJlqAf6PsPQuPmWNxplfN577WRydWaNNzbAPXwFEI3VpjZRn_ymzN9z6YEVPwxEOAfcRMYvjH6SEpOXqIf8GIShUiHyc_7Ks-0vVj6z7EHDNesxFKopBzXzLtCjXDHOKMjGgCL91ELiVfNZuCkIvyZJDmx4Wia-ZUZJU7A",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UserProfileTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"get details in user profile\"] = jsonData.successful === true;\n\nvar jsonData = JSON.parse(responseBody);\ntests[\"verify userName\"] = jsonData.data.userName === \"Lillian\";"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/api/users/loggedinuser",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "QueryByCommunityNameTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"view community\"] = jsonData.successful === true;\n\nvar jsonData = JSON.parse(responseBody);\ntests[\"verify communityName\"] = jsonData.data.communityName === \"Game of Warriors\";"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/api/community/community/?slug=game-of-warriors",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CommunityLeadersTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"view community leaders\"] = jsonData.successful === true;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/api/community/communityleaders?communityId=120&page=1",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CommunityCommentsTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"view community comments\"] = jsonData.successful === true;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/api/communitycomments/comments?commentId=null&communityId=130&communityEventId=undefined&page=1&pageSize=12",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CommunityMembersTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"view community members\"] = jsonData.successful === true;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/api/community/communitymembers?communityId=130&page=1",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CommunityLikeTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"community like successful\"] = jsonData.successful === true;\n\n"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/api/communitylike/like",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"CommunityId\":\"130\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CommunityUnlikeTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"community unlike successful\"] = jsonData.successful === true;\n"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/api/communitylike/unlike",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"CommunityId\":\"130\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ToggleFavouriteCommunityTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"Add/Remove to favourite community successful\"] = jsonData.successful === true;\n"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/api/users/togglefavouritecommunity/130",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SearchCommunitiesByGameSkillsTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"search community by Games successful\"] = jsonData.successful === true;\n\nvar jsonData = JSON.parse(responseBody);\ntests[\"verify community  by Games language\"] = jsonData.data.items[0].language === \"English\";"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/api/search/searchcommunities",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"SearchTerm\":\"\",\"Games\":[],\"Tags\":[],\"AgeRestriction\":\"3\",\"Page\":1,\"GameSkill\":\"3\",\"LanguagePreference\":\"1\"}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SearchCommunitiesByTagTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"search community by tags successful\"] = jsonData.successful === true;\n"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.emblim.co/api/search/searchcommunities",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"SearchTerm\":\"\",\"Games\":[],\"Tags\":[232],\"AgeRestriction\":\"\",\"Page\":1,\"GameSkill\":\"\",\"LanguagePreference\":\"\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
