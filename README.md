@@ -1,18 +1,16 @@
-# AutomationTest-Rest-API
-AutomationTest-Rest-API
-This project provides Backend APIs for properties rental websites , IOS and Android devices.
+# Emblim AutoTest Rest API By Using Postman
+Emblim-AutoTest-Rest-API-Postman
+Exploratory Testing - This project was tested the Emblim Rest APIs using postman.
+
+## Demo Video
+
+![](https://github.com/lilliancheng2012/lilliancheng2012.github.io/blob/master/public/img/posts/22-09-16/PostmanDemo.mp4?raw=true)
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Git](https://git-scm.com/) Source Code Management
-- [JDK8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) JDK 1.8
-- [Spring Boot](http://projects.spring.io/spring-boot/) Get App up and running as quickly as possible.
-- [Maven 3](https://maven.apache.org/download.cgi) Maven Build Tool
-- [Junit 4](http://junit.org/junit4/) Unit Testing Tool
-- [Mysql](https://www.mysql.com/) - Databse
-- [Swagger](http://swagger.io/swagger-ui/) - Swagger UI is a dependency-free collection of HTML, Javascript, and CSS assets that dynamically generate beautiful documentation and sandbox from a Swagger-compliant API.
+- [Git](https://git-scm.com/) Source Code Management.
 - [Postman](http://www.getpostman.com) - Postman, tool for API testing (Manual, Automation)
 
 ### Install Postman
@@ -22,11 +20,7 @@ This project provides Backend APIs for properties rental websites , IOS and Andr
 2. Click on: http://www.getpostman.com, click the gray button 「Chrome App (Free)」 to install it.
 ![](https://raw.githubusercontent.com/lilliancheng2012/lilliancheng2012.github.io/master/public/img/posts/19-09-16/install%20postman.PNG)
 
-### Run Rent API Application
-Run `mvn spring-boot:run` to start Rest Rent APi service. After server starting, type `http://localhost:8080/api/swagger-ui.html` to check the APIs in the Swagger Pages.
-![](https://raw.githubusercontent.com/lilliancheng2012/lilliancheng2012.github.io/master/public/img/posts/18-09-16/Swagger.PNG)
-
-### Prepare Test Cases
+### How To Use Postman
 
 1. Open Postman form Chrome.
 
