@@ -1,10 +1,11 @@
 # Emblim AutoTest Rest API By Using Postman
+
 Emblim-AutoTest-Rest-API-Postman
+
 Exploratory Testing - This project was tested the Emblim Rest APIs using postman.
 
 ## Demo Video
-
-![](https://github.com/lilliancheng2012/lilliancheng2012.github.io/blob/master/public/img/posts/22-09-16/PostmanDemo.mp4?raw=true)
+- [Demo Video](https://github.com/lilliancheng2012/lilliancheng2012.github.io/blob/master/public/img/posts/22-09-16/PostmanDemo.mp4?raw=true)
 
 ## Getting Started
 
